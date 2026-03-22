@@ -1,0 +1,23 @@
+client:
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
+server:
+# 0으로 세팅하면 spring이 임의로 port를 할당
+  port: 0
+spring :
+  redis:
+    host: localhost
+    port: 6379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/ordermsa?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+  jpa:
+    database: mysql
+    #    InnoDB??
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    show_sql: true
