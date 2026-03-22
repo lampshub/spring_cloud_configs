@@ -5,6 +5,11 @@ server:
 # 0으로 세팅하면 spring이 임의로 port를 할당
   port: 0
 spring :
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   redis:
     host: localhost
     port: 6379
@@ -21,3 +26,6 @@ spring :
     hibernate:
       ddl-auto: create
     show_sql: true
+  cloud:
+    bus:
+      enabled: true
